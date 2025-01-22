@@ -25,6 +25,7 @@ type LogMessage struct {
 	Path       string    `json:"path,omitempty"`
 	StatusCode int       `json:"statusCode,omitempty"`
 	Error      string    `json:"error,omitempty"`
+	Detail     string    `json:"detail,omitempty"`
 }
 
 func main() {
@@ -88,6 +89,7 @@ func main() {
 				"method", logMsg.Method,
 				"path", logMsg.Path,
 				"status_code", logMsg.StatusCode,
+				"detail", logMsg.Detail,
 			)
 		}
 
